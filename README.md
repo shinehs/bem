@@ -55,7 +55,8 @@ BEM的关键是光凭class名字就可以让其他开发者知道某个标记用
 **BEM与SCSS**
 现在的开发很多时候都会用到SCSS，那么如果使用SCSS的嵌套写BEM规范呢，在SCSS中可以使用@at-root：
 
-```.block {
+```
+.block {
   @at-root #{&}__element {
   }
   @at-root #{&}--modifier {
