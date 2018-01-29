@@ -1,7 +1,7 @@
 **什么是BEM**
 BEM其实是块（block）、元素（element）、修饰符（modifier）的缩写，利用不同的区块，功能以及样式来给元素命名。这三个部分使用__与--连接（这里用两个而不是一个是为了留下用于块儿的命名）。命名约定的模式如下：
 
->```.block{}
+```.block{}
 .block__element{}
 .block--modifier{}```
 
@@ -16,7 +16,7 @@ BEM其实是块（block）、元素（element）、修饰符（modifier）的缩
 **BEM的优势**
 BEM的关键是光凭class名字就可以让其他开发者知道某个标记用来做什么的，明白各个模块之间的关系，例如如下的命名：
 
->```.nav{}
+```.nav{}
 .nav__item{}
 .nav--blue{}
 .nav--item__hand{}```
@@ -30,13 +30,13 @@ BEM的关键是光凭class名字就可以让其他开发者知道某个标记用
 
 再看一个更具体的例子，如果写一个搜索模块，按照常规，我们会写出如下代码：
 
->```<form class="site-search  full">
+```<form class="site-search  full">
   <input type="text" class="field">
   <input type="Submit" value ="Search" class="button">
 </form>``` 
 但是如果时用BEM规范去写，代码如下：
 
->```<form class="site__search  site__search--full">
+```<form class="site__search  site__search--full">
   <input type="text" class="site__search__field">
   <input type="Submit" value ="Search" class="site__search__button">
 </form> ```
@@ -47,7 +47,7 @@ BEM的关键是光凭class名字就可以让其他开发者知道某个标记用
 **BEM与SCSS**
 现在的开发很多时候都会用到SCSS，那么如果使用SCSS的嵌套写BEM规范呢，在SCSS中可以使用@at-root：
 
->```.block {
+```.block {
   @at-root #{&}__element {
   }
   @at-root #{&}--modifier {
